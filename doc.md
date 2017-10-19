@@ -52,3 +52,32 @@ For example, an array of elements of type float64 has itemsize 8 (=64/8), while 
 
 the buffer containing the actual elements of the array.
 배열의 실제 요소를 가지고 있는 버퍼. 일반적으로 이 속성을 사용하지는 않습니다. 대신해 우리는 배열안에 있는 요소를 인덱싱 패실리티를 이용하여 접근합니다.
+
+### 예제
+
+```python
+>>> import numpy as np
+>>> a = np.arange(15).reshape(3, 5)
+>>> a
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14]])
+>>> a.shape
+(3, 5)
+>>> a.ndim
+2
+>>> a.dtype.name
+'int64'
+>>> a.itemsize
+8
+>>> a.size
+15
+>>> type(a)
+<type 'numpy.ndarray'>
+>>> b = np.array([6, 7, 8])
+>>> b
+array([6, 7, 8])
+>>> type(b)
+<type 'numpy.ndarray'>
+```
+
